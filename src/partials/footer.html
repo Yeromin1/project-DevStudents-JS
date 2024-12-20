@@ -1,15 +1,77 @@
 <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer__content">
+      <div class="footer__content-wrapper">
+        <a href="./index.html" class="footer__logo">
+          Lloyd<span class="text__color">Jefferson.</span>
+        </a>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a
+              class="footer__list-link"
+              href="https://www.instagram.com/goitclub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a
+              class="footer__list-link"
+              href="https://www.facebook.com/goITclub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a
+              class="footer__list-link"
+              href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Linkedin</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a
+              class="footer__list-link"
+              href="https://github.com/Yeromin1/project-DevStudents-JS"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+      <p class="footer__copyright">
+        <span>&copy;</span> Copyright 2024. Made by LloydJefferson
+      </p>
+    </div>
   </div>
 </footer>
+
+<script>
+  setTimeout(() => {
+    const loader = document.querySelector('.loader');
+    const preloader = document.querySelector('.preloader');
+
+    if (loader) {
+      loader.style.transition = 'opacity 0.5s ease';
+      loader.style.opacity = 0;
+
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 500);
+    }
+
+    if (preloader) {
+      preloader.style.transition = 'opacity 0.5s ease';
+      preloader.style.opacity = 0;
+
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500);
+    }
+  }, 2000);
+</script>

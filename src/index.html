@@ -1,19 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>LloydJefferson</title>
+
     <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .preloader {
+        background: black;
+        left: 0;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .preloader svg {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        animation: drawText 3s ease forwards;
+        text-transform: uppercase;
+      }
+
+      @keyframes drawText {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <div class="preloader">
+      <svg width="250" height="55" xmlns="http://www.w3.org/2000/svg">
+        <text
+          x="10"
+          y="50"
+          font-size="40"
+          font-family="Arial"
+          font-weight="bold"
+          stroke="#00b068"
+          fill="none"
+          stroke-width="1.5"
+          class="animated-text"
+        >
+          Hello I AM
+        </text>
+      </svg>
+      <svg width="250" height="55" xmlns="http://www.w3.org/2000/svg">
+        <text
+          x="10"
+          y="50"
+          font-size="40"
+          font-family="Arial"
+          font-weight="bold"
+          stroke="#00b068"
+          fill="none"
+          stroke-width="1.5"
+          class="animated-text"
+        >
+          FullStack
+        </text>
+      </svg>
+      <svg width="260" height="55" xmlns="http://www.w3.org/2000/svg">
+        <text
+          x="10"
+          y="50"
+          font-size="40"
+          font-family="Arial"
+          font-weight="bold"
+          stroke="#00b068"
+          fill="none"
+          stroke-width="1.5"
+          class="animated-text"
+        >
+          developer
+        </text>
+      </svg>
+    </div>
+
+    <load src="./partials/header.html" />
 
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <load src="./partials/hero.html" />
+      <load src="./partials/about-me.html" />
+      <load src="./partials/tech-skills.html" />
+      <load src="./partials/my-projects.html" />
+      <load src="./partials/benefits.html" />
+      <load src="./partials/faq.html" />
+      <load src="./partials/reviews.html" />
+      <load src="./partials/work-together.html" />
     </main>
 
     <load src="./partials/footer.html" />

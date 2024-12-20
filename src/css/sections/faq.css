@@ -1,0 +1,134 @@
+.faq__title {
+  margin-bottom: 40px;
+}
+
+.faq__acc-item {
+  border-radius: 0;
+  border-bottom: 1px solid var(--border-faq);
+  padding: 28px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: border-radius var(--animation), border-bottom var(--animation),
+    gap var(--animation);
+}
+
+.faq__acc-item.is-active {
+  border-radius: 16px;
+  border-bottom: none;
+  gap: 24px;
+}
+
+.faq__acc-item:has(+ .is-active) {
+  border-bottom: none;
+}
+
+.faq__acc-trigger {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: start;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+
+.faq__acc-svg {
+  width: 12px;
+  height: 6px;
+  margin: 13px 10px;
+  fill: var(--text);
+  flex-shrink: 0;
+  transition: transform var(--animation);
+}
+
+.faq__acc-use {
+  width: 12px;
+  height: 6px;
+}
+
+.faq__acc-panel {
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-timing-function: ease;
+}
+
+.faq__acc-item.js-enabled .faq__ac-panel {
+  visibility: hidden;
+}
+
+.faq__acc-item.is-active .faq__ac-panel {
+  visibility: visible;
+}
+
+.faq__acc-item.is-active .faq__acc-svg {
+  transform: scaleY(-100%);
+}
+
+.faq__acc-item.is-active {
+  background-color: var(--bg-faq);
+}
+
+@media screen and (min-width: 768px) {
+  .faq__title {
+    margin-bottom: 60px;
+    max-width: 592px;
+  }
+
+  .faq__acc-trigger {
+    font-size: 20px;
+    gap: 24px;
+  }
+
+  .faq__acc-trigger {
+    font-size: 20px;
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1268px) {
+  .faq__content {
+    display: flex;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .faq__title {
+    margin-bottom: 0;
+    max-width: 520px;
+  }
+
+  .faq__accordion-container {
+    max-width: 592px;
+    margin-top: 276px;
+  }
+
+  .faq__content {
+    background-image: url(../../images/decor/decor-bg-4-desc-1x.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left 612px;
+    background-size: 526px 408px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .faq__content {
+      background-image: url(../../images/decor/decor-bg-4-desc-2x.png);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: left 612px;
+      background-size: 526px 408px;
+    }
+  }
+}

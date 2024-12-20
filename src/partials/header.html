@@ -1,19 +1,41 @@
 <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+    <div class="header__content">
+      <a href="./index.html" class="header__logo logo">
+        Lloyd <span class="text__color">Jefferson.</span>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="nav">
+        <div class="switcher">
+          <div class="switcher__content">
+            <input type="checkbox" id="theme-switcher" />
+            <label for="theme-switcher">Toggle</label>
+          </div>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#about">About me</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#my-projects">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#work">Contacts</a>
+          </li>
+        </ul>
+
+        <div class="header__btn-mobile">
+          <a class="btn order__btn" href="#work">Order the project</a>
+        </div>
+      </nav>
+      <div class="header__btn">
+        <a class="btn order__btn" href="#work">Order the project</a>
+      </div>
+
+      <div class="header__toggle-btn" id="menuBtn">
+        <span class="header__toggle-icon"></span>
+        <span class="header__toggle-icon"></span>
+        <span class="header__toggle-icon"></span>
+      </div>
+    </div>
   </div>
 </header>

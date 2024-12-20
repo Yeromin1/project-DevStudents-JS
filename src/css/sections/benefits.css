@@ -1,0 +1,119 @@
+.benefits__title {
+  width: 100%;
+  margin: 0 auto 40px;
+}
+
+.benefits__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.benefits__item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 320px;
+}
+
+.benefits__item-icon {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--bg-faq);
+  fill: var(--accet-green);
+  transition: transform 900ms ease 50ms;
+}
+
+@media screen and (min-width: 768px) {
+  .benefits__content {
+    display: grid;
+    place-items: center;
+  }
+
+  .benefits__title {
+    margin-bottom: 0;
+  }
+
+  .benefits__item {
+    max-width: 336px;
+  }
+
+  .benefits__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+  }
+
+  .benefits__item:nth-child(1) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .benefits__item:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .benefits__item:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .benefits__item:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 3;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .benefits__content {
+    padding-top: 116px;
+    background-image: url(../../images/decor/decor-bg-3-desc-1x.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 526px 408px;
+    margin-top: -116px;
+  }
+
+  .benefits__title {
+    margin-left: 0;
+    max-width: 704px;
+  }
+
+  .benefits__list {
+    margin-top: -96px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefits__item {
+    max-width: 384px;
+  }
+
+  .benefits__item:nth-child(1) {
+    grid-column: 3 / 3;
+  }
+
+  .benefits__item:nth-child(4) {
+    grid-column: 3 / 3;
+    grid-row: 2 / 3;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio),
+    (min-resolution: 2dppx),
+    (min-resolution: 196dpi) {
+    .benefits__content {
+      background-image: url(../../images/decor/decor-bg-3-desc-2x.png);
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+      background-size: 526px 408px;
+    }
+  }
+}
+
+.benefits__item:hover .benefits__item-icon,
+.benefits__item:focus .benefits__item-icon {
+  transform: rotate(360deg) scale(1.1);
+}

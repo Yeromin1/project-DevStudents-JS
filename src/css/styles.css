@@ -1,18 +1,17 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
 @import url('./reset.css');
+@import url('normalize.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+@import url('../../node_modules/swiper/swiper.min.css');
+@import url('../../node_modules/swiper/modules/navigation.min.css');
 
 /* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+@import url('sections/header.css');
+@import url('sections/hero.css');
+@import url('sections/about-me.css');
+@import url('sections/benefits.css');
+@import url('sections/faq.css');
+@import url('sections/my-projects.css');
+@import url('sections/reviews.css');
+@import url('sections/tech-skills.css');
+@import url('sections/work-together.css');
+@import url('sections/footer.css');

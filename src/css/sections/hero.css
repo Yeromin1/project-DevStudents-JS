@@ -1,0 +1,166 @@
+.hero {
+  padding-top: 72px;
+  background-image: url(../../images/decor/decor-bg-8-mob-1x.png);
+  /*background-color: transparent;*/
+  background-repeat: no-repeat;
+  background-position: 30% -8%;
+  background-size: 320px 704px;
+}
+
+.hero__content {
+  position: relative;
+}
+
+.hero__img-wrapper {
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.hero__img {
+  border-radius: 24px;
+  max-width: 340px;
+  width: 100%;
+}
+
+.hero__description {
+  margin-bottom: 32px;
+  max-width: 337px;
+}
+
+.social__list {
+  padding: 32px 0;
+  background-color: var(--bg-form);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social__link {
+  transition: color var(--animation);
+}
+
+.social__link:hover {
+  color: var(--accet-green);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio),
+  (min-resolution: 2dppx),
+  (min-resolution: 196dpi) {
+  .hero {
+    background-image: url(../../images/decor/decor-bg-8-mob-2x.png);
+    background-repeat: no-repeat;
+    background-position: 30% -8%;
+    background-size: 320px 704px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* main {
+    padding-top: 88px;
+  } */
+  main {
+    padding-top: 16px;
+  }
+
+  .hero {
+    padding-top: 60px;
+    background-image: url(../../images/decor/decor-bg-5-tab-1x.png);
+    background-repeat: no-repeat;
+    background-position: 50% -8%;
+    background-size: 704px 896px;
+  }
+
+  .hero__content {
+    margin-bottom: 60px;
+  }
+
+  .hero__title {
+    font-size: 124px;
+    line-height: 1.16;
+    margin-bottom: 40px;
+  }
+
+  .hero__text {
+    max-width: 336px;
+    margin-right: 32px;
+  }
+
+  .hero__tab-wrapper {
+    position: relative;
+    height: 336px;
+  }
+
+  .hero__img {
+    position: absolute;
+    max-width: 336px;
+    height: 336px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .social__list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio),
+    (min-resolution: 2dppx),
+    (min-resolution: 196dpi) {
+    .hero {
+      background-image: url(../../images/decor/decor-bg-5-tab-2x.png);
+      background-repeat: no-repeat;
+      background-position: 50% -8%;
+      background-size: 704px 896px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    padding-top: 38px;
+  }
+
+  .hero_container {
+    position: relative;
+  }
+
+  .hero__tab-wrapper {
+    position: static;
+    margin-bottom: 185px;
+    height: auto;
+  }
+
+  .hero__title {
+    max-width: 603px;
+    font-size: 136px;
+    line-height: 1.15;
+    margin-bottom: 40px;
+  }
+
+  .hero__text {
+    max-width: 592px;
+  }
+
+  .hero__img-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 728px;
+  }
+
+  .hero__img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+  }
+
+  .hero__description {
+    max-width: 592px;
+  }
+
+  .hero__content {
+    margin-bottom: 0;
+  }
+}
