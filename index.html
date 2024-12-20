@@ -1,127 +1,845 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/project-DevStudents-JS/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>LloydJefferson</title>
+
+    <style>
+      .preloader {
+        background: black;
+        left: 0;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .preloader svg {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        animation: drawText 3s ease forwards;
+        text-transform: uppercase;
+      }
+
+      @keyframes drawText {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
     <script type="module" crossorigin src="/project-DevStudents-JS/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/project-DevStudents-JS/assets/styles-DvPDDfy5.css">
+    <link rel="modulepreload" crossorigin href="/project-DevStudents-JS/assets/vendor-Czw9bCZh.js">
+    <link rel="stylesheet" crossorigin href="/project-DevStudents-JS/assets/vendor-DLkfUfUw.css">
+    <link rel="stylesheet" crossorigin href="/project-DevStudents-JS/assets/index-jWtihOiO.css">
   </head>
   <body>
+    <div class="preloader">
+      <svg width="250" height="55" xmlns="http://www.w3.org/2000/svg">
+        <text
+          x="10"
+          y="50"
+          font-size="40"
+          font-family="Arial"
+          font-weight="bold"
+          stroke="#00b068"
+          fill="none"
+          stroke-width="1.5"
+          class="animated-text"
+        >
+          Hello I AM
+        </text>
+      </svg>
+      <svg width="250" height="55" xmlns="http://www.w3.org/2000/svg">
+        <text
+          x="10"
+          y="50"
+          font-size="40"
+          font-family="Arial"
+          font-weight="bold"
+          stroke="#00b068"
+          fill="none"
+          stroke-width="1.5"
+          class="animated-text"
+        >
+          FullStack
+        </text>
+      </svg>
+      <svg width="260" height="55" xmlns="http://www.w3.org/2000/svg">
+        <text
+          x="10"
+          y="50"
+          font-size="40"
+          font-family="Arial"
+          font-weight="bold"
+          stroke="#00b068"
+          fill="none"
+          stroke-width="1.5"
+          class="animated-text"
+        >
+          developer
+        </text>
+      </svg>
+    </div>
+
     <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/project-DevStudents-JS/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
+    <div class="header__content">
+      <a href="./index.html" class="header__logo logo">
+        Lloyd <span class="text__color">Jefferson.</span>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="nav">
+        <div class="switcher">
+          <div class="switcher__content">
+            <input type="checkbox" id="theme-switcher" />
+            <label for="theme-switcher">Toggle</label>
+          </div>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#about">About me</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#my-projects">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#work">Contacts</a>
+          </li>
+        </ul>
+
+        <div class="header__btn-mobile">
+          <a class="btn order__btn" href="#work">Order the project</a>
+        </div>
+      </nav>
+      <div class="header__btn">
+        <a class="btn order__btn" href="#work">Order the project</a>
+      </div>
+
+      <div class="header__toggle-btn" id="menuBtn">
+        <span class="header__toggle-icon"></span>
+        <span class="header__toggle-icon"></span>
+        <span class="header__toggle-icon"></span>
+      </div>
+    </div>
   </div>
 </header>
 
 
     <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
+      <section class="hero">
   <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/project-DevStudents-JS/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
+    <div class="hero__content">
+      <h1 class="hero__title">
+        Hello, I am <span class="text__color">Fullstack developer</span>
+      </h1>
+      <div class="hero__tab-wrapper">
+        <div class="hero__img-wrapper">
+          <picture>
+            <source
+              media="(max-width:767px)"
+              srcset="/project-DevStudents-JS/assets/hero-v5-mob-1x-I16fhk69.jpg 1x, /project-DevStudents-JS/assets/hero-v5-mob-2x-Dz7btLH9.jpg 2x"
+            />
+            <source
+              media="(max-width:1279px)"
+              srcset="/project-DevStudents-JS/assets/hero-v5-tab-1x-I1hSSdUW.jpg 1x, /project-DevStudents-JS/assets/hero-v5-tab-2x-CJcaIkm3.jpg 2x"
+            />
+            <source
+              media="(min-width:1280px)"
+              srcset="/project-DevStudents-JS/assets/hero-v5-desc-1x-Dsg3ul5a.jpg 1x, /project-DevStudents-JS/assets/hero-v5-desc-2x-Cnxbpp1I.jpg 2x"
+            />
+            <img
+              class="hero__img"
+              src="/project-DevStudents-JS/assets/hero-v5-mob-2x-Dz7btLH9.jpg"
+              alt="Fullstack developer photo"
+              width="488"
+            />
+          </picture>
+        </div>
+        <p class="hero__description p-caption">
+          I work with people all over the world to create
+          <span class="text__color">impressive</span> and
+          <span class="text__color">functional websites</span> that reflect each
+          client's unique personality.
+        </p>
+      </div>
     </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
   </div>
-</section>
-
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
+  <div class="container-fluid">
+    <ul class="social__list">
+      <li class="social__item">
         <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
+          href="https://www.instagram.com/goitclub/"
+          class="social__link"
           target="_blank"
           rel="noopener noreferrer"
+          >Instagram</a
         >
-          HTML Inject
-        </a>
       </li>
-      <li class="badges-item">
+      <li class="social__item">
         <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
+          href="https://www.facebook.com/goITclub/"
           target="_blank"
           rel="noopener noreferrer"
+          class="social__link"
+          >Facebook</a
         >
-          Full Reload
-        </a>
       </li>
-      <li class="badges-item">
+      <li class="social__item">
         <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
+          href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+          class="social__link"
           target="_blank"
           rel="noopener noreferrer"
+          >Linkedin</a
         >
-          Sort Media Queries
-        </a>
+      </li>
+      <li class="social__item">
+        <a
+          href="https://github.com/olexiy-kireyko/project-DevStudents-JS"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social__link"
+          >GitHub</a
+        >
       </li>
     </ul>
   </div>
-</article>
+</section>
+
+      <section class="about-me" id="about">
+  <div class="container">
+    <div class="about-me__container">
+      <h2 class="about-me__title">About <span class="text__color">me</span></h2>
+      <div class="about-me__box">
+        <div class="about-me__box-foto">
+          <img
+            srcset="/project-DevStudents-JS/assets/about-me-desctop-1x-B3gVzE0h.jpg 1x, /project-DevStudents-JS/assets/about-me-desctop-2x-C2KYM5pA.jpg 2x"
+            src="../images/about-me/about-me-desctop-2x.jpg"
+            alt="My foto"
+            width="340"
+            class="about-me__my-foto"
+          />
+        </div>
+        <div class="about-me__bio">
+          <h3 class="about-me__subtitle">bio</h3>
+          <ul class="about-me__bio-list">
+            <li class="about-me__bio-text p-l">
+              I'm Lloyd Jefferson, a talented programmer specializing in
+              software development. My expertise spans various programming
+              languages and technologies, and I am dedicated to continually
+              enhancing my skills. I thrive on seeking unconventional and
+              creative solutions to problems, leveraging a high level of
+              analytical skills to effectively tackle even the most challenging
+              tasks.
+            </li>
+            <li class="about-me__bio-text p-l">
+              Adaptable to both independent and team-oriented work, I
+              collaborate seamlessly with colleagues, exchanging ideas and
+              finding optimal solutions. My professional maturity enables me to
+              navigate challenges and stressful situations with a calm demeanor,
+              maintaining a consistently high quality of work. Committed to
+              self-improvement, I actively engage in studying new technologies
+              and practices to stay current with the latest innovations in the
+              field.
+            </li>
+          </ul>
+        </div>
+        <div class="about-me__education-title-container">
+          <h3 class="about-me__subtitle">education</h3>
+          <ul class="about-me__list">
+            <li class="about-me__item p-l">
+              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
+              York
+            </li>
+            <li class="about-me__item p-l">
+              2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+              School, New York
+            </li>
+            <li class="about-me__item p-l">
+              2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+            </li>
+          </ul>
+        </div>
+        <div class="about-me__role-container">
+          <h3 class="about-me__subtitle">role</h3>
+          <ul class="about-me__list">
+            <li class="about-me__item p-l">Frontend development</li>
+            <li class="about-me__item p-l">HeadlessCMS, Wordpress</li>
+            <li class="about-me__item p-l">Blender (enjoy)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="tech-skills">
+  <div class="container-fluid">
+    <div class="skills__container">
+      <h2 class="visually-hidden">Tech skills</h2>
+
+      <div class="skills__line skills__line-top">
+        <div class="skills__content" id="top-skills">
+          <ul class="skills__inner">
+            <li class="skills__item">HTML/CSS</li>
+            <li class="skills__item">JAVASCRIPT</li>
+            <li class="skills__item">REACT</li>
+            <li class="skills__item">NODE.JS</li>
+            <li class="skills__item">REACT NATIVE</li>
+            <li class="skills__item">TYPESCRIPT</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="skills__line skills__line-bottom">
+        <div class="skills__content" id="bottom-skills">
+          <ul class="skills__inner">
+            <li class="skills__item">HTML/CSS</li>
+            <li class="skills__item">JAVASCRIPT</li>
+            <li class="skills__item">REACT</li>
+            <li class="skills__item">NODE.JS</li>
+            <li class="skills__item">REACT NATIVE</li>
+            <li class="skills__item">TYPESCRIPT</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="my__projects" id="my-projects">
+  <div class="container">
+    <div class="my__projects__container">
+      <h2 class="projects__title">
+        my <span class="text__color">projects</span>
+      </h2>
+
+      <ul class="project__list">
+        <li class="project__item">
+          <img
+            srcset="/project-DevStudents-JS/assets/wallet-1x-DLkd9PVd.jpg 1x, /project-DevStudents-JS/assets/wallet-2x-nLU3DcTf.jpg 2x"
+            src="/project-DevStudents-JS/assets/wallet-1x-DLkd9PVd.jpg"
+            alt="Wallet webservice"
+            class="project__image"
+          />
+          <div class="project__info">
+            <p class="project__tech__stack p-l">
+              React, JavaScript, Node JS, Git
+            </p>
+            <div class="project__info__item">
+              <h3 class="project__subtitle">Wallet webservice</h3>
+              <a
+                href="https://github.com/Yeromin1/project-DevStudents-JS/"
+                class="visit__btn"
+                target="_blank"
+                >visit
+                <svg class="project__svg" width="15" height="15">
+                  <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="project__item">
+          <img
+            srcset="/project-DevStudents-JS/assets/green-harvest-1x-QUSIIIhs.jpg 1x, /project-DevStudents-JS/assets/green-harvest-2x-BXlP64lJ.jpg 2x"
+            src="/project-DevStudents-JS/assets/green-harvest-1x-QUSIIIhs.jpg"
+            alt="Green harvest webservice"
+            class="project__image"
+          />
+          <div class="project__info">
+            <p class="project__tech-stack p-l">
+              React, JavaScript, Node JS, Git
+            </p>
+            <div class="project__info__item">
+              <h3 class="project__subtitle">Green harvest online store</h3>
+              <a
+                href="https://github.com/Yeromin1/project-DevStudents-JS"
+                class="visit__btn"
+                target="_blank"
+                >visit
+                <svg class="project__svg" width="15" height="15">
+                  <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="project__item">
+          <img
+            srcset="/project-DevStudents-JS/assets/english-exellence-1x-Bo6RNnum.jpg 1x, /project-DevStudents-JS/assets/english-exellence-2x-2fKeNXhZ.jpg 2x"
+            src="/project-DevStudents-JS/assets/english-exellence-1x-Bo6RNnum.jpg"
+            alt="English Exellence webservice"
+            class="project__image"
+          />
+          <div class="project__info">
+            <p class="project__tech__stack p-l">
+              React, JavaScript, Node JS, Git
+            </p>
+            <div class="project__info__item">
+              <h3 class="project__subtitle">English Exellence webservice</h3>
+              <a
+                href="https://github.com/Yeromin1/project-DevStudents-JS"
+                class="visit__btn"
+                target="_blank"
+                >visit
+                <svg class="project__svg" width="15" height="15">
+                  <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="buttons">
+        <button
+          type="button"
+          id="load-more"
+          class="load__more current p-m"
+          tabindex="-1"
+        >
+          Load More
+        </button>
+
+        <button
+          type="button"
+          id="hide-projects"
+          class="hide__projects current p-m"
+          style="display: none"
+        >
+          Hide Projects
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="benefits">
+  <div class="container">
+    <div class="benefits__content">
+      <h2 class="benefits__title">
+        <span class="text__color">Benefits</span> of working with me
+      </h2>
+      <ul class="benefits__list">
+        <li class="benefits__item">
+          <svg class="benefits__item-icon" width="48" height="48">
+            <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-user"></use>
+          </svg>
+          <p class="benefits__item-title p-caption">Expertise</p>
+          <p class="benefits__item-text p-l">
+            With extensive experience in development, I have a deep
+            understanding of programming and website development.
+          </p>
+        </li>
+        <li class="benefits__item">
+          <svg class="benefits__item-icon" width="48" height="48">
+            <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-message"></use>
+          </svg>
+          <p class="benefits__item-title p-caption">Communication</p>
+          <p class="benefits__item-text p-l">
+            Understanding your needs and wants is my priority and I am always
+            available for discussions and open to corrections.
+          </p>
+        </li>
+        <li class="benefits__item">
+          <svg class="benefits__item-icon" width="48" height="48">
+            <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-brush"></use>
+          </svg>
+          <p class="benefits__item-title p-caption">Art</p>
+          <p class="benefits__item-text p-l">
+            Thanks to my creative nature, I am ready to accept challenges and
+            help you bring your ideas to life.
+          </p>
+        </li>
+        <li class="benefits__item">
+          <svg class="benefits__item-icon" width="48" height="48">
+            <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-hourglass"></use>
+          </svg>
+          <p class="benefits__item-title p-caption">Urgent execution</p>
+          <p class="benefits__item-text p-l">
+            I understand how important time is to you. Ready to work quickly and
+            efficiently, without reducing the quality of work.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <section class="faq">
+  <div class="container">
+    <div class="faq__content">
+      <h2 class="faq__title">
+        frequently asked <span class="text__color">question</span>
+      </h2>
+      <ul class="faq__accordion-container">
+        <!-- 1 -->
+        <li class="faq__acc-item is-active js-enabled" id="ac-0">
+          <h3 class="faq__acc-header">
+            <button
+              class="faq__acc-trigger"
+              type="button"
+              aria-disabled="false"
+              aria-expanded="false"
+            >
+              What programming languages ​​are most often used in your project?
+              <svg class="faq__acc-svg">
+                <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-down"></use>
+              </svg>
+            </button>
+          </h3>
+          <div
+            class="faq__acc-panel"
+            style="transition-duration: 600ms; height: auto"
+          >
+            <p class="faq__acc-text">
+              In the field of web development, there are various technologies
+              and programming languages. Typically, this includes a combination
+              of frontend (client side) and backend (server side) languages.
+            </p>
+          </div>
+        </li>
+        <!-- 2 -->
+        <li class="faq__acc-item js-enabled" id="ac-1">
+          <h3 class="faq__acc-header">
+            <button
+              class="faq__acc-trigger"
+              type="button"
+              aria-disabled="false"
+              aria-expanded="false"
+            >
+              What are the deadlines for the project?
+              <svg class="faq__acc-svg">
+                <use
+                  href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-down"
+                  width="12px"
+                  height="6px"
+                ></use>
+              </svg>
+            </button>
+          </h3>
+          <div
+            class="faq__acc-panel"
+            style="transition-duration: 600ms; height: 0px"
+          >
+            <p class="faq__acc-text">
+              The terms of project implementation depend to a large extent on a
+              number of factors, such as the scope of the project, its
+              complexity, and the availability of resources. Determining exact
+              deadlines is a difficult task, and it usually occurs during the
+              planning phase of the project.
+            </p>
+          </div>
+        </li>
+        <!-- 3 -->
+        <li class="faq__acc-item js-enabled" id="ac-2">
+          <h3 class="faq__acc-header">
+            <button
+              class="faq__acc-trigger"
+              type="button"
+              aria-disabled="false"
+              aria-expanded="false"
+            >
+              What payment methods do you accept?
+              <svg class="faq__acc-svg">
+                <use
+                  href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-down"
+                  width="12px"
+                  height="6px"
+                ></use>
+              </svg>
+            </button>
+          </h3>
+          <div
+            class="faq__acc-panel"
+            style="transition-duration: 600ms; height: 0px"
+          >
+            <p class="faq__acc-text">
+              Payment through credit and debit cards such as Visa, MasterCard,
+              specialized electronic payment systems such as PayPal, as well as
+              payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+            </p>
+          </div>
+        </li>
+        <!-- 4 -->
+        <li class="faq__acc-item js-enabled" id="ac-3">
+          <h3 class="faq__acc-header">
+            <button
+              class="faq__acc-trigger"
+              type="button"
+              aria-disabled="false"
+              aria-expanded="false"
+            >
+              How can I contact you?
+              <svg class="faq__acc-svg">
+                <use
+                  href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-down"
+                  width="12px"
+                  height="6px"
+                ></use>
+              </svg>
+            </button>
+          </h3>
+          <div
+            class="faq__acc-panel"
+            style="transition-duration: 600ms; height: 0px"
+          >
+            <p class="faq__acc-text">
+              In the field of web development, there are various technologies
+              and programming languages. Typically, this includes a combination
+              of frontend (client side) and backend (server side) languages.
+            </p>
+          </div>
+        </li>
+        <!-- 5 -->
+        <li class="faq__acc-item js-enabled" id="ac-4">
+          <h3 class="faq__acc-header">
+            <button
+              class="faq__acc-trigger"
+              type="button"
+              aria-disabled="false"
+              aria-expanded="false"
+            >
+              Do you provide advice or support?
+              <svg class="faq__acc-svg">
+                <use
+                  href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-down"
+                  width="12px"
+                  height="6px"
+                ></use>
+              </svg>
+            </button>
+          </h3>
+          <div
+            class="faq__acc-panel"
+            style="transition-duration: 600ms; height: 0px"
+          >
+            <p class="faq__acc-text">
+              The terms of project implementation depend to a large extent on a
+              number of factors, such as the scope of the project, its
+              complexity, and the availability of resources. Determining exact
+              deadlines is a difficult task, and it usually occurs during the
+              planning phase of the project.
+            </p>
+          </div>
+        </li>
+        <!-- 6 -->
+        <li class="faq__acc-item js-enabled" id="ac-5">
+          <h3 class="faq__acc-header">
+            <button
+              class="faq__acc-trigger"
+              type="button"
+              aria-disabled="false"
+              aria-expanded="false"
+            >
+              What does the process of developing a software product look like
+              from idea to implementation?
+              <svg class="faq__acc-svg">
+                <use
+                  href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-down"
+                  width="12px"
+                  height="6px"
+                ></use>
+              </svg>
+            </button>
+          </h3>
+          <div
+            class="faq__acc-panel"
+            style="transition-duration: 600ms; height: 0px"
+          >
+            <p class="faq__acc-text">
+              Payment through credit and debit cards such as Visa, MasterCard,
+              specialized electronic payment systems such as PayPal, as well as
+              payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <section class="reviews">
+  <div class="container">
+    <h2 class="reviews__title">Reviews</h2>
+
+    <div class="swiper reviews__swiper">
+      <ul class="swiper-wrapper reviews__swiper-list"></ul>
+
+      <div class="swiper__btn-list">
+        <button type="button" class="swiper__btn swiper__btn-prev">
+          <svg width="24" height="24">
+            <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-right"></use>
+          </svg>
+        </button>
+        <button type="button" class="swiper__btn swiper__btn-next">
+          <svg width="24" height="24">
+            <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-arr-right"></use>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+      <section class="work-together section" id="work">
+  <div class="container">
+    <div class="work-together__content">
+      <h2 class="work-together__header">
+        let’s <span class="text__color">work together</span>
+      </h2>
+      <p class="work-together__text p-caption">
+        Contact me to transform your ideas into exceptional solutions.
+      </p>
+      <ul class="work-together__list">
+        <li class="work-together__item">
+          <svg class="work-together-list__svg" width="24" height="24">
+            <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-phone"></use>
+          </svg>
+          <a class="work-together-list__link" href="tel:+380904567890"
+            >+38 090 456 78 90</a
+          >
+        </li>
+        <li class="work-together__item">
+          <svg class="work-together-list__svg" width="24" height="24">
+            <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-mail"></use>
+          </svg>
+          <a
+            class="work-together-list__link"
+            href="mailto:lloydjefferson@gmail.com"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="work-together__item">
+          <svg class="work-together-list__svg" width="24" height="24">
+            <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-map"></use>
+          </svg>
+          <span class="work-together-list__link work-together-list__map"
+            >USA, New York</span
+          >
+        </li>
+      </ul>
+
+      <form class="work-together__form">
+        <div class="work-together__input-container">
+          <input
+            class="form__email p-l"
+            type="email"
+            name="form-email"
+            placeholder="Your email*"
+            autocomplete="off"
+          />
+
+          <svg class="form__svg-check-right" width="16" height="16">
+            <use href="/project-DevStudents-JS/assets/icons-CYC6FQL3.svg#icon-success"></use>
+          </svg>
+          <p class="form__email-check-wrong">Invalid email, try again</p>
+        </div>
+
+        <textarea
+          class="form__textarea p-l"
+          name="form-textarea"
+          placeholder="Message"
+          rows="4"
+          required
+        ></textarea>
+
+        <button class="btn form__btn" type="submit">send message</button>
+      </form>
+
+      <div class="work-together__modal-part"></div>
+    </div>
+  </div>
+</section>
 
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer__content">
+      <div class="footer__content-wrapper">
+        <a href="./index.html" class="footer__logo">
+          Lloyd<span class="text__color">Jefferson.</span>
+        </a>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a
+              class="footer__list-link"
+              href="https://www.instagram.com/goitclub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a
+              class="footer__list-link"
+              href="https://www.facebook.com/goITclub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a
+              class="footer__list-link"
+              href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Linkedin</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a
+              class="footer__list-link"
+              href="https://github.com/Yeromin1/project-DevStudents-JS"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+      <p class="footer__copyright">
+        <span>&copy;</span> Copyright 2024. Made by LloydJefferson
+      </p>
+    </div>
   </div>
 </footer>
+
+<script>
+  setTimeout(() => {
+    const loader = document.querySelector('.loader');
+    const preloader = document.querySelector('.preloader');
+
+    if (loader) {
+      loader.style.transition = 'opacity 0.5s ease';
+      loader.style.opacity = 0;
+
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 500);
+    }
+
+    if (preloader) {
+      preloader.style.transition = 'opacity 0.5s ease';
+      preloader.style.opacity = 0;
+
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500);
+    }
+  }, 2000);
+</script>
 
 
   </body>
